@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1680878202 source:d:\ifsp\3 sem\ed2\aula 1 - 08.02\desempenhoalgoordenanao\desempenho.c
+
+1680881168 source:d:\ifsp\3 sem\ed2\aula 1 - 08.02\desempenhoalgoordenanao\funcoesauxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funcoesAuxiliares.h"
+
+1680880672 d:\ifsp\3 sem\ed2\aula 1 - 08.02\desempenhoalgoordenanao\funcoesauxiliares.h
+
+1680881202 source:d:\ifsp\3 sem\ed2\aula 1 - 08.02\desempenhoalgoordenanao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcoesAuxiliares.h"
+
