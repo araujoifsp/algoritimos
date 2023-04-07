@@ -7,7 +7,7 @@
 #include "algoritmos.h"s
 
 
-void criaVetor(int vetor, int tamanho){
+void criaVetor(int *vetor, int tamanho){
     vetor = malloc(tamanho * sizeof(int));
     if(vetor){
         printf("Memoria alocado com sucesso");
@@ -57,31 +57,37 @@ void sub_menu() {
 
 
 
-void opcao_ecolhida(int options2){
+int opcao_ecolhida(int options2){
     switch(options2){
             case 1:
                 printf("\nVoce escolheu a opcao de 1.000 elementos\n");
                 pausaTela;
+                return 1000;
                 break;
             case 2:
                 printf("\nVoce escolheu a opcao de 5.000 elementos\n");
                 pausaTela;
+                return 5000;
                 break;
             case 3:
                 printf("\nVoce escolheu a opcao de 10.000 elementos\n");
                 pausaTela;
+                return 10000;
                 break;
             case 4:
                 printf("\nVoce escolheu a opcao de 20.000 elementos\n");
                 pausaTela;
+                return 20000;
                 break;
             case 5:
                 printf("\nVoce escolheu a opcao de 50.000 elementos\n");
                 pausaTela;
+                return 50000;
                 break;
             case 6:
                 printf("\nVoce escolheu a opcao de 100.000 elementos\n");
                 pausaTela;
+                return 100000;
                 break;
             default:
                 printf("ERRO!!!!! \nPreencha o menu corretamente\n");

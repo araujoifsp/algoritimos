@@ -6,7 +6,7 @@
 #include "algoritmos.h"
 
 
-long timer(void (*funcao)(), int *i){
+long timer(void (*funcao)()){
     struct timeval inicio, fim;
     gettimeofday(&inicio, NULL);
 

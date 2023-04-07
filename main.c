@@ -31,6 +31,7 @@ int main()
         int i = 0;
         long tempo[10];
         long media;
+        int tam = 0;
 
         int options, options2;
         menu();
@@ -43,7 +44,12 @@ int main()
             pausaTela;
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            criaVetor(vetor,tam);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+                //tempo[i] = timer();
+            }
             break;
         case 2 :
             apagaTela;
@@ -52,7 +58,11 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+              //  tempo[i] = timer();
+            }
             break;
         case 3 :
             apagaTela;
@@ -61,7 +71,11 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 4 :
             apagaTela;
@@ -70,7 +84,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 5 :
             apagaTela;
@@ -79,7 +98,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 6 :
             apagaTela;
@@ -88,7 +112,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 7 :
             apagaTela;
@@ -97,7 +126,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 8 :
             apagaTela;
@@ -106,7 +140,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 9 :
             apagaTela;
@@ -115,7 +154,12 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            tam = opcao_ecolhida(options2);
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor);
+             //   tempo[i] = timer();
+            }
             break;
         case 10 :
             apagaTela;
@@ -129,13 +173,6 @@ int main()
             printf("ERRO!!!!! \nPreencha o menu corretamente");
             pula2Linhas;
             break;
-        }
-
-        //alocação de acordo com valor escolhido
-        criaVetor(vetor,options2);
-        for(i = 0; i<10 ; i++){
-            preencheVetor(vetor);
-            //tempo[i] = timer();
         }
 
     }

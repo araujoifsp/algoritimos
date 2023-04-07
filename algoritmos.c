@@ -5,7 +5,7 @@
 #include "desempenho.h"
 #include "algoritmos.h"
 
-void bubbleSort(int *vetor, int n) {
+void bubbleSort(int *vetor, int n){
     int i, continua, aux, fim = n;
 
     do{
