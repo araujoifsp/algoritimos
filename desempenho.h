@@ -2,5 +2,5 @@
 #include <sys/time.h>
 
 typedef struct timeval;
-long timer(void (*funcao)());
-void media(long*res, int tamanho);
+double timer(int *vetor, int tamanho, int alg);
+double media(double *res);

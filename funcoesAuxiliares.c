@@ -7,16 +7,15 @@
 #include "algoritmos.h"s
 
 
-void criaVetor(int *vetor, int tamanho){
+int criaVetor(int *vetor, int tamanho){
     vetor = malloc(tamanho * sizeof(int));
-    if(vetor){
-        printf("Memoria alocado com sucesso");
-    }
+    return vetor;
 }
 
-void preencheVetor(int *vetor){
-    //parte do leo
-    printf("\n Preenchendo vetor...");
+void preencheVetor(int *vetor, int tamanho){
+    for (int i = 0; i < tamanho; i++) {
+        vetor[i] = rand() % 100;
+    }
 }
 
 void menu() {

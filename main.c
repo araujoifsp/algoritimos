@@ -2,12 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 #include "funcoesAuxiliares.h"
 #include "desempenho.h"
 #include "algoritmos.h"
 
 int main()
 {
+    setlocale(LC_ALL,"portuguese");
+
     printf("**** Projeto: Desempenho de Algoritmos de Ordenacao ****");
     pula2Linhas;
     printf("**** Alunos: ****");
@@ -29,9 +32,10 @@ int main()
 
         int *vetor;
         int i = 0;
-        long tempo[10];
-        long media;
+        double *tempo;
+        double media;
         int tam = 0;
+        tempo = malloc(10 * sizeof(double));
 
         int options, options2;
         menu();
@@ -45,11 +49,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            criaVetor(vetor,tam);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-                //tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 2 :
             apagaTela;
@@ -59,10 +59,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-              //  tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 3 :
             apagaTela;
@@ -72,10 +69,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 4 :
             apagaTela;
@@ -85,11 +79,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 5 :
             apagaTela;
@@ -99,11 +89,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 6 :
             apagaTela;
@@ -114,10 +100,7 @@ int main()
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
             tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 7 :
             apagaTela;
@@ -127,11 +110,7 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 8 :
             apagaTela;
@@ -141,25 +120,16 @@ int main()
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 9 :
             apagaTela;
             printf("\nVoce escolheu o algoritmo -> TimSort\n");
-
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
             tam = opcao_ecolhida(options2);
-            tam = opcao_ecolhida(options2);
-            for(i = 0; i<10 ; i++){
-                preencheVetor(vetor);
-             //   tempo[i] = timer();
-            }
+            vetor = criaVetor(vetor,tam);
             break;
         case 10 :
             apagaTela;
@@ -175,6 +145,20 @@ int main()
             break;
         }
 
+            for(i = 0; i<10 ; i++){
+                preencheVetor(vetor,tam);
+                tempo[i] = timer(vetor,tam,options);
+                printf("Tempo de ordenação do vetor %d : ",i+1);
+                printf("%f segundos\n",tempo[i]);
+            }
+            double soma = 0;
+            for(int i = 0; i < 10; i++){
+                soma += tempo[i];
+            }
+            media = soma / 10;
+            pula1Linha;
+            printf("Tempo médio de Execução %f segundos",media);
+            pula2Linhas;
     }
 }
 

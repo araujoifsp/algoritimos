@@ -4,6 +4,70 @@
 #include "funcoesAuxiliares.h"
 #include "desempenho.h"
 #include "algoritmos.h"
+#define min(a, b) ((a) < (b) ? (a) : (b))
+
+void insertion_sort_tim(int *arr, int left, int right) {
+    for (int i = left + 1; i <= right; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= left && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+// FunÃ§Ã£o auxiliar para mesclagem de dois subarrays ordenados
+void merge_tim(int *arr, int l, int m, int r) {
+    int len1 = m - l + 1, len2 = r - m;
+    int left[len1], right[len2];
+    for (int i = 0; i < len1; i++){
+        left[i] = arr[l + i];
+    }
+    for (int i = 0; i < len2; i++){
+        right[i] = arr[m + 1 + i];
+    }
+    int i = 0, j = 0, k = l;
+    while (i < len1 && j < len2) {
+        if (left[i] <= right[j]) {
+            arr[k] = left[i];
+            i++;
+        } else {
+            arr[k] = right[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < len1) {
+        arr[k] = left[i];
+        i++;
+        k++;
+    }
+
+    while (j < len2) {
+        arr[k] = right[j];
+        j++;
+        k++;
+    }
+}
+
+//FunÃ§Ã£o principal Timsort
+void timsort(int arr, int n) {
+    const int RUN = 32;
+    for (int i = 0; i < n; i += RUN){
+        insertion_sort_tim(arr, i, min(i + RUN - 1, n - 1));
+    }
+
+    for (int size = RUN; size < n; size = 2 * size){
+        for (int left = 0; left < n; left += 2 * size) {
+            int mid = left + size - 1;
+            int right = min(left + 2 * size - 1, n - 1);
+            merge_tim(arr, left, mid, right);
+        }
+    }
+}
 
 void bubbleSort(int *vetor, int n){
     int i, continua, aux, fim = n;
@@ -32,6 +96,7 @@ void insertionSort(int *vetor, int n){
         vetor[j] = aux;
     }
 }
+
 
 void selectionSort(int *vetor, int n){
     int i, j, menor, troca;
@@ -88,17 +153,17 @@ void radixSort_lsd(int *vetor, int n) {
     int exp = 1;
 
     while (max_num / exp > 0) {
-        // Cria buckets para cada dígito (0-9)
+        // Cria buckets para cada dÃ­gito (0-9)
         int buckets[10][n];
         int bucket_sizes[10] = {0};
 
-        // Coloca cada número na lista em seu bucket correspondente
+        // Coloca cada nÃºmero na lista em seu bucket correspondente
         for (int i = 0; i < n; i++) {
             int digit = (vetor[i] / exp) % 10;
             buckets[digit][bucket_sizes[digit]] = vetor[i]; bucket_sizes[digit]++;
         }
 
-        // Reconstroi a lista ordenada pelos dígitos atuais
+        // Reconstroi a lista ordenada pelos dÃ­gitos atuais
         int k = 0;
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < bucket_sizes[i]; j++) {
@@ -106,9 +171,134 @@ void radixSort_lsd(int *vetor, int n) {
             }
         }
 
-        // Incrementa o dígito em 10 vezes para a próxima iteração
+        // Incrementa o dÃ­gito em 10 vezes para a prÃ³xima iteraÃ§Ã£o
         exp *= 10;
     }
 
+}
+
+void quickSort(int *vetor, int inicio, int fim) {
+    int pivo;
+
+    if(fim > inicio) {
+        pivo = particiona(vetor, inicio, fim);
+        quickSort(vetor, inicio, pivo-1);
+        quickSort(vetor, pivo+1, fim);
+    }
+}
+
+int particiona(int *vetor, int inicio, int fim) {
+    int esquerda, direita, pivo, aux;
+
+    esquerda = inicio;
+    direita = fim;
+    pivo = vetor[inicio];
+    while(esquerda < direita) {
+        while(vetor[esquerda] <= pivo)
+            esquerda++;
+        while(vetor[direita] > pivo)
+            direita--;
+        if(esquerda < direita) {
+            aux = vetor[esquerda];
+            vetor[esquerda] = vetor[direita];
+            vetor[direita] = aux;
+        }
+    }
+    vetor[inicio] = vetor[direita];
+    vetor[direita] = pivo;
+
+    return direita;
+}
+void merge(int arr[], int l, int m, int r)
+	{
+    	// O vetor original foi dividido em duas partes
+    	// Vetor esquerdo e direito
+    	int len1 = m - l + 1, len2 = r - m;
+    	int left[len1], right[len2];
+    	for (int i = 0; i < len1; i++)
+        	left[i] = arr[l + i];
+    	for (int i = 0; i < len2; i++)
+        	right[i] = arr[m + 1 + i];
+    	int i = 0;
+    	int j = 0;
+    	int k = l;
+    	// Depois de comparar, nï¿½s mesclamos dois vetores
+    	// em um subvetor maior
+    	while (i < len1 && j < len2)
+    	{
+        	if (left[i] <= right[j])
+        	{
+            	arr[k] = left[i];
+            	i++;
+        	}
+        	else
+        	{
+            	arr[k] = right[j];
+            	j++;
+        	}
+        	k++;
+    	}
+    	// Copia os elementos que restaram para a esquerda, caso existam
+    	while (i < len1)
+    	{
+        	arr[k] = left[i];
+        	k++;
+        	i++;
+    	}
+    	// copia os elementos que restaram para a direita, caso existam
+    	while (j < len2)
+    	{
+        	arr[k] = right[j];
+        	k++;
+        	j++;
+    	}
+	}
+
+void mergeSort(int arr[], int inicio, int fim)
+{
+    if (inicio < fim)
+    {
+        // Encontra o ponto mÃ©dio para dividir o array em duas metades
+        int meio = inicio + (fim - inicio) / 2;
+
+        // Ordena a primeira e a segunda metade
+        mergeSort(arr, inicio, meio);
+        mergeSort(arr, meio + 1, fim);
+
+        // Mescla as duas metades ordenadas
+        merge(arr, inicio, meio, fim);
+    }
+}
+
+void heapify(int arr[], int n, int i) {
+    int largest = i;
+    int l = 2*i + 1;
+    int r = 2*i + 2;
+
+    if (l < n && arr[l] > arr[largest])
+        largest = l;
+
+    if (r < n && arr[r] > arr[largest])
+        largest = r;
+
+    if (largest != i) {
+        int temp = arr[i];
+        arr[i] = arr[largest];
+        arr[largest] = temp;
+
+        heapify(arr, n, largest);
+    }
+}
+void heapSort(int arr[], int n) {
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i);
+
+    for (int i = n-1; i >= 0; i--) {
+        int temp = arr[0];
+        arr[0] = arr[i];
+        arr[i] = temp;
+
+        heapify(arr, i, 0);
+    }
 }
 
