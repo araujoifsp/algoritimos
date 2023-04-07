@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "listaClientes.h"
 #include "funcoesAuxiliares.h"
+#include "desempenho.h"
+#include "algoritmos.h"
 
 int main()
 {

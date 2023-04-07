@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "timer.h"
 #include <sys/time.h>
+#include "funcoesAuxiliares.h"
+#include "desempenho.h"
+#include "algoritmos.h"
 
 
 void timer(void (*funcao)(),long *res, int i) {

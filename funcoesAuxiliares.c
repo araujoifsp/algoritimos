@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-//#include "listaClientes.h"
 #include "funcoesAuxiliares.h"
+#include "desempenho.h"
+#include "algoritmos.h"s
 
 void menu() {
     pula1Linha;
