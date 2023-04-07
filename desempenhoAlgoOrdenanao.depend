@@ -16,3 +16,29 @@
 	<string.h>
 	"funcoesAuxiliares.h"
 
+1680887351 source:/home/guilherme/Documentos/if/estd1/estd2/algoritimos/funcoesAuxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1680887351 /home/guilherme/Documentos/if/estd1/estd2/algoritimos/funcoesAuxiliares.h
+
+1680887406 /home/guilherme/Documentos/if/estd1/estd2/algoritimos/desempenho.h
+	<stdio.h>
+	<sys/time.h>
+
+1680887351 /home/guilherme/Documentos/if/estd1/estd2/algoritimos/algoritmos.h
+	<stdio.h>
+
+1680887351 source:/home/guilherme/Documentos/if/estd1/estd2/algoritimos/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+

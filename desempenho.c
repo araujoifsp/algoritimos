@@ -6,7 +6,7 @@
 #include "algoritmos.h"
 
 
-void timer(void (*funcao)(),long *res, int i) {
+long timer(void (*funcao)(), int i) {
     struct timeval inicio, fim;
     gettimeofday(&inicio, NULL);
 
@@ -14,7 +14,7 @@ void timer(void (*funcao)(),long *res, int i) {
 
     gettimeofday(&fim, NULL);
     long s = fim.tv_sec - inicio.tv_sec;
-    res[i] = s;
+    return s;
 }
 
 void media(long *res, int tamanho){
