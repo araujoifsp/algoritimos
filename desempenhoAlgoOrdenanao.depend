@@ -42,3 +42,45 @@
 	"desempenho.h"
 	"algoritmos.h"
 
+1680887636 source:e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\desempenho.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1680888208 e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\funcoesauxiliares.h
+
+1680888852 e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\desempenho.h
+	<stdio.h>
+	<sys/time.h>
+
+1680887886 e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\algoritmos.h
+	<stdio.h>
+
+1680887826 source:e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\algoritmos.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1680888830 source:e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1680888350 source:e:\ifsp\3º semestre\ed2\p1\nova pasta\algoritimos\funcoesauxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+

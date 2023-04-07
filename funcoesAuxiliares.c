@@ -6,6 +6,19 @@
 #include "desempenho.h"
 #include "algoritmos.h"s
 
+
+void criaVetor(int vetor, int tamanho){
+    vetor = malloc(tamanho * sizeof(int));
+    if(vetor){
+        printf("Memoria alocado com sucesso");
+    }
+}
+
+void preencheVetor(int *vetor){
+    //parte do leo
+    printf("\n Preenchendo vetor...");
+}
+
 void menu() {
     pula1Linha;
     printf("Escolha um algoritmo de ordenacao: \n");
@@ -40,6 +53,41 @@ void sub_menu() {
     printf("5. 50.000 elementos\n");
     printf("6. 100.000 elementos\n");
 
+}
+
+
+
+void opcao_ecolhida(int options2){
+    switch(options2){
+            case 1:
+                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
+                pausaTela;
+                break;
+            case 2:
+                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
+                pausaTela;
+                break;
+            case 3:
+                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
+                pausaTela;
+                break;
+            case 4:
+                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
+                pausaTela;
+                break;
+            case 5:
+                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
+                pausaTela;
+                break;
+            case 6:
+                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
+                pausaTela;
+                break;
+            default:
+                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
+                pausaTela;
+                break;
+    }
 }
 
 int resp_sub_menu() {

@@ -26,6 +26,12 @@ int main()
 
 
     while(1) {
+
+        int *vetor;
+        int i = 0;
+        long tempo[10];
+        long media;
+
         int options, options2;
         menu();
         options = resp_menu();
@@ -35,41 +41,9 @@ int main()
             apagaTela;
             printf("\nVoce escolheu o algoritmo -> BubbleSort\n");
             pausaTela;
-
-            //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 2 :
             apagaTela;
@@ -78,37 +52,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 3 :
             apagaTela;
@@ -117,37 +61,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 4 :
             apagaTela;
@@ -156,37 +70,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 5 :
             apagaTela;
@@ -195,37 +79,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 6 :
             apagaTela;
@@ -234,37 +88,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 7 :
             apagaTela;
@@ -273,37 +97,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 8 :
             apagaTela;
@@ -312,37 +106,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 9 :
             apagaTela;
@@ -351,37 +115,7 @@ int main()
             //sub menu
             sub_menu();
             options2 = resp_sub_menu();
-            switch(options2){
-            case 1:
-                printf("\nVoce escolheu a opcao de 1.000 elementos\n");
-                pausaTela;
-                break;
-            case 2:
-                printf("\nVoce escolheu a opcao de 5.000 elementos\n");
-                pausaTela;
-                break;
-            case 3:
-                printf("\nVoce escolheu a opcao de 10.000 elementos\n");
-                pausaTela;
-                break;
-            case 4:
-                printf("\nVoce escolheu a opcao de 20.000 elementos\n");
-                pausaTela;
-                break;
-            case 5:
-                printf("\nVoce escolheu a opcao de 50.000 elementos\n");
-                pausaTela;
-                break;
-            case 6:
-                printf("\nVoce escolheu a opcao de 100.000 elementos\n");
-                pausaTela;
-                break;
-            default:
-                printf("ERRO!!!!! \nPreencha o menu corretamente\n");
-                pausaTela;
-                break;
-            }
-
+            opcao_ecolhida(options2);
             break;
         case 10 :
             apagaTela;
@@ -396,6 +130,14 @@ int main()
             pula2Linhas;
             break;
         }
+
+        //alocação de acordo com valor escolhido
+        criaVetor(vetor,options2);
+        for(i = 0; i<10 ; i++){
+            preencheVetor(vetor);
+            //tempo[i] = timer();
+        }
+
     }
 }
 
