@@ -34,6 +34,7 @@
 		<Unit filename="algoritmos.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="algoritmos.h" />
 		<Unit filename="desempenho.c">
 			<Option compilerVar="CC" />
 		</Unit>

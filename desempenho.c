@@ -45,7 +45,7 @@ double timer(int *vetor, int tamanho, int alg){
         break;
 
         case 9:
-                timsort(vetor, tamanho);
+                timSort(vetor, tamanho);
         break;
     }
     gettimeofday(&fim, NULL);

@@ -85,7 +85,7 @@
 	"desempenho.h"
 	"algoritmos.h"
 
-1681578662 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\desempenho.c
+1681583559 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\desempenho.c
 	<stdio.h>
 	<stdlib.h>
 	<sys/time.h>
@@ -99,10 +99,10 @@
 	<stdio.h>
 	<sys/time.h>
 
-1681578662 c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.h
+1681583472 c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.h
 	<stdio.h>
 
-1681581686 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\funcoesauxiliares.c
+1681582564 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\funcoesauxiliares.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -111,7 +111,7 @@
 	"desempenho.h"
 	"algoritmos.h"
 
-1681581669 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\main.c
+1681583621 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -120,7 +120,7 @@
 	"desempenho.h"
 	"algoritmos.h"
 
-1681578662 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.c
+1681583543 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.c
 	<stdio.h>
 	<stdlib.h>
 	<sys/time.h>
