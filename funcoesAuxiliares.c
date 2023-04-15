@@ -14,9 +14,19 @@ int criaVetor(int *vetor, int tamanho){
 
 void preencheVetor(int *vetor, int tamanho){
     for (int i = 0; i < tamanho; i++) {
-        vetor[i] = rand() % 100;
+        vetor[i] = rand() % 1000;
     }
 }
+
+void inverteVetor(int *vetor, int tamanho){
+   int temp;
+   for(int i = 0; i < tamanho/2; i++) {
+      temp = vetor[i];
+      vetor[i] = vetor[tamanho-i-1];
+      vetor[tamanho-i-1] = temp;
+   }
+}
+
 
 void menu() {
     pula1Linha;

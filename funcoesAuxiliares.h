@@ -17,3 +17,5 @@ int opcao_ecolhida(int options2);
 int criaVetor(int *vetor, int tamanho);
 
 void preencheVetor(int *vetor, int tamanho);
+
+void inverteVetor(int *vetor, int tamanho);

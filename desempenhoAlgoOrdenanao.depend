@@ -85,3 +85,46 @@
 	"desempenho.h"
 	"algoritmos.h"
 
+1681578662 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\desempenho.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1681580884 c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\funcoesauxiliares.h
+
+1681578662 c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\desempenho.h
+	<stdio.h>
+	<sys/time.h>
+
+1681578662 c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.h
+	<stdio.h>
+
+1681581686 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\funcoesauxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1681581669 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+
+1681578662 source:c:\users\gabriel\onedrive\햞ea de trabalho\algoritimos\algoritmos.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/time.h>
+	"funcoesAuxiliares.h"
+	"desempenho.h"
+	"algoritmos.h"
+

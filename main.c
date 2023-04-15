@@ -33,6 +33,8 @@ int main()
         int *vetor;
         int i = 0;
         double *tempo;
+        double tempoOrdenado;
+        double tempoInverso;
         double media;
         int tam = 0;
         tempo = malloc(10 * sizeof(double));
@@ -159,6 +161,16 @@ int main()
             pula1Linha;
             printf("Tempo médio de Execução %f segundos",media);
             pula2Linhas;
+
+            tempoOrdenado = timer(vetor,tam,options);
+            printf("Tempo de execução com o vetor ordenado(Melhor caso): ");
+            printf("%f segundos\n",tempoOrdenado);
+
+            inverteVetor(vetor,tam);
+            tempoInverso = timer(vetor,tam,options);
+            printf("Tempo de execução com o vetor inverso(Pior caso): ");
+            printf("%f segundos\n",tempoInverso);
+
     }
 }
 
